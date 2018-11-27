@@ -8,7 +8,7 @@ pipeline {
     }
     stage('SonarQ Analysis') {
       steps {
-        sh '''def scannerHome = tool \'SonarQube Scanner 6.7\';
+        sh '''def scannerHome = tool \'SonarQube Scanner 3.2\';
     withSonarQubeEnv(\'SonarQ-Openshift\') {
       sh "${scannerHome}/bin/sonar-scanner"'''
       }
